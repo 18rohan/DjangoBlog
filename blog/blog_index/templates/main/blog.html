@@ -1,0 +1,15 @@
+{% extends 'main/index.html' %}
+
+{% block content %}
+{% for blog in blogs %}
+    <div class="row">
+        <div class="col s10, m8, ">
+            <h3>{{blog.blog_title}}</h3>
+            <p style="font-size:70%">Published {{blog.blog_published}}</p>
+
+            <p style="font-size:80%">Author {{blog.blog_author}}</p>
+            {{blog.blog_content}}
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}

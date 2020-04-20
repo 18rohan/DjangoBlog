@@ -1,0 +1,32 @@
+{% extends "main/index.html" %}
+{% block content %}
+
+<br><br><br><br><br><br><br><br><br><br>
+<div class="row">
+ 	{% for blog in Blogs %}
+    <div class="col s12 m6 l4">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">{{blog.blog_title}}</span>
+          <p style="font-size: 70%">{{blog.blog_published}}</p>
+          <p style="font-size: 70%">{{blog.blog_author}}</p>
+          <p>{{blog.blog_content}}</p>
+        </div>
+        <div class="card-action">
+        	
+          	<a href="#">Visit {{blog.blog_title}}</a>
+          
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+
+
+
+
+
+{% endblock %}
+
+
